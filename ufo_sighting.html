@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="UFO Sighting">
+        <meta name="author" content="Monica Martin">
+
+        <title>UFO Sighting</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        
+        <!-- Custom styles for this template -->
+        <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/ufo_style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/filter.css" />
+
+        <!-- Load data  --> 
+        <script type="text/javascript" src="./data/data.js"></script> 
+
+    </head>
+    <body background="https://i1.wp.com/ufobusterradio.com/wp-content/uploads/2016/11/maxresdefault-1.jpg?resize=584%2C413">
+        <div class="container ">
+            <br><br>
+            <p dir="auto" class="col-md-5 col-md-offset-4">
+                WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at 
+                <strong><a href="http://www.ALIENS-R-REAL.com" rel="nofollow noreferrer noopener" target="_blank">www.ALIENS-R-REAL.com</a></strong> 
+                have collected all of the eye-witness reports we could to prove it! <br><br> Enter a date below to view eye-witness reports.
+            </p>
+            <form class="form-horizontal" role="form" onsubmit="return getUFOSighting()">
+                <div class="input-group" id="adv-search">
+                    <input id="datetime" type="search" class="form-control" placeholder="Search for sigthing. Enter date M/D/YYYY" onsearch="return getUFOSighting()" />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                        <label for="filter">Filter by:<br><br>Country</label>
+                                        <select id="country" class="form-control">
+                                         <!--<option value="US">US</option>
+                                            <option value="AU">AU</option>
+                                            <option value="CA">CA</option>
+                                            <option value="GB">GB</option>-->
+                                            <option value="" selected>select country</option>
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="contain">State</label>
+                                        <input list="stateOptions" id="state"  name="state" class="form-control"/>
+                                        <datalist id="stateOptions">
+                                          <!--<option value="AR">
+                                            <option value="CA">
+                                            <option value="FL">
+                                            <option value="KN">
+                                            <option value="UT">-->
+                                        </datalist>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">City</label>
+                                            <input id="city" class="form-control" type="text" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Shape</label>
+                                            <input list="shapeOptions" id="shape"  name="shape" class="form-control"/>
+                                            <datalist id="shapeOptions">
+                                                <!--<option value="Circle">
+                                                <option value="Light">
+                                                <option value="Triangle">
+                                                <option value="Fireball">
+                                                <option value="Unknown">-->
+                                            </datalist>
+                                        </div>                                        
+
+                                        <!-- <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>-->
+                                    </form>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" ><i class="glyphicon glyphicon-search"></i></button>
+                                <!--<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>-->
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </form>                
+
+            <div id="sightingsTable" class="col-md-10 col-md-offset-1">
+                <br><br>
+                <!--<table id="sightingsTable" class="table table-bordered table-sm table-responsive" >
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>-->
+            </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="./js/ufo.js"></script>
+    </body>
+</html>
